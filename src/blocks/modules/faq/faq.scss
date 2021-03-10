@@ -11,7 +11,7 @@
         background-color: $primary-1-light;
         border: none;
         line-height: 58px;
-        margin-bottom: 10px;
+        margin-top: 10px;
         position: relative;
         outline: none;
         &::after{
@@ -21,19 +21,26 @@
             right: 10px;
             font-size: 30px;
             color: $color-font-dark;
+            transition: .2s;
         }
-        &:focus{
+        &.open{
             font-family: $font-semibold;
-            &::after{
-                opacity: 0;
-                transition: .2s;
-            }
+
+        }
+        &.open::after{
+            opacity: 0;
         }
     }
     .panel{
+        padding-left: 50px;
+        padding-right: 90px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         background-color:  $primary-1-light;
+        &.open{
+            display: block;
+        }
     }
 }
+
