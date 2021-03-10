@@ -1,3 +1,7 @@
+.box-faq{
+    margin-bottom: 50px;
+}
+
 .accordion-container{
     display: flex;
     flex-direction: column;
@@ -40,6 +44,7 @@
         background-color:  $primary-1-light;
         &.open{
             display: block;
+            padding-bottom: 40px;
         }
     }
 }

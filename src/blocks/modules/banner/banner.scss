@@ -58,7 +58,50 @@
             text-decoration: underline;
         }
     }
+    .image-banner{
+        text-align: right;
+    }
     img{
         width: 100%;
+    }
+}
+
+@media (max-width: 991px){
+    .banner{
+        padding-left: 15px;
+        .image-banner{
+            img{
+                width: 100%;
+            }
+        }
+        .title-banner{
+            width: 100%;
+            h1{
+                font-size: 30px;
+                line-height: 40px;
+            }
+            .small-title{
+                max-width: 310px;
+                h4{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .banner{
+        padding-left: 15px;
+        .image-banner{
+        display: none;
+        }
+        .title-banner{
+            text-align: center;
+            .small-title{
+                margin: 0 auto;  
+                margin-bottom: 15px;              
+            }
+        }
     }
 }
