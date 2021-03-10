@@ -1,0 +1,53 @@
+.box-advantages{
+    padding: 10px 80px;
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .plus{
+            max-width: 33%;
+            box-sizing: border-box;
+            text-align: center;
+            padding:35px;
+            transition: .4s;
+            &:hover{
+               transform: scale(1.1);
+               transition: .4s;
+            }
+            .box-img{
+                margin: 0 auto; 
+                width: 90px;
+                height: 90px;
+                display: flex;
+                justify-content: center;
+                align-items: center;                
+                border-radius: 100%;
+                img{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+.cards  .plus:first-of-type .box-img{
+    background-color: $primary-3;
+}
+.cards  .plus:nth-of-type(2) .box-img{
+    background-color: $primary-4;
+}
+.cards  .plus:nth-of-type(3) .box-img{
+    background-color: $primary-5;
+}
+.cards  .plus:nth-of-type(4) .box-img{
+    background-color: $primary-6;
+}
+.cards  .plus:nth-of-type(5) .box-img{
+    background-color: $primary-7;
+}
+
+.cards  .plus:last-of-type .box-img{
+    background-color: $primary-8;
+}

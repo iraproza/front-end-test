@@ -1,0 +1,31 @@
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        @include font(30px, $font-bold, $color-font-dark);
+        text-decoration: none;
+        span {
+            color: $primary-2-light;
+        }
+    }
+}
+
+.navigation{
+    display: flex;
+    a{
+        @include font(16px, $font-regular, $color-font-dark);
+        padding: 5px 15px;
+        text-decoration: none;
+        border-radius: 30px;
+
+        &:hover{
+            background-color: $primary-1;
+            transition: .4s;
+            color: $light;
+        }
+    }
+    button{
+        margin-left: 25px;
+    }
+}

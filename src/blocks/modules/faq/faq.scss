@@ -1,0 +1,39 @@
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 70%;
+
+    button{
+        @include font(20px, $font-medium, $color-font-dark);
+        text-align: left;
+        padding-left: 50px;
+        background-color: $primary-1-light;
+        border: none;
+        line-height: 58px;
+        margin-bottom: 10px;
+        position: relative;
+        outline: none;
+        &::after{
+            content: '+';
+            position: absolute;
+            top:3px;
+            right: 10px;
+            font-size: 30px;
+            color: $color-font-dark;
+        }
+        &:focus{
+            font-family: $font-semibold;
+            &::after{
+                opacity: 0;
+                transition: .2s;
+            }
+        }
+    }
+    .panel{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color:  $primary-1-light;
+    }
+}

@@ -1,0 +1,64 @@
+.bg-banner{
+    background-image: url(../img/city.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    .bg-circle{
+        background-image: url(../img/circle.png);
+        background-size: contain;
+        background-repeat:repeat-x ;
+    }
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 15px 20px 70px;
+    .title-banner{
+        width: 60%;
+        p{
+            max-width: 420px;
+        }
+        .small-title{
+            display: flex;
+            align-items: center;
+            background-color: #e2eaed;
+            border-radius: 20px;
+            max-width: 365px;
+            margin-bottom: 20px;
+            .circle{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 10px;
+                    width: 39px;
+                    height: 35px;
+                    border-radius: 100%;
+                    background-color: $primary-2;
+                    i{ 
+                        font-size: 19px; 
+                        color: $light;
+                    }
+            }
+            h4{
+                @include font( 18px, $font-regular)
+            }
+        }
+        h1{
+            line-height: 75px;
+        }
+    }
+    .watch-video{
+        @include font( 18px, $font-semibold, $primary-1);
+        margin-left: 25px;
+        text-decoration: none;
+        transition: .4s;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
