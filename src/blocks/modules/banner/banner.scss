@@ -94,13 +94,24 @@
     .banner{
         padding-left: 15px;
         .image-banner{
-        display: none;
-        }
+            display: none;
+            }
         .title-banner{
             text-align: center;
             .small-title{
                 margin: 0 auto;  
                 margin-bottom: 15px;              
+            }
+            .btn-box{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .btn{
+                    padding: 10px 20px;
+                }
+                .watch-video{
+                    margin: 0;
+                }
             }
         }
     }
