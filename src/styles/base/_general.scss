@@ -2,115 +2,111 @@ h1, h2, h3, h4, h5, h6, ul, body {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     background-color: $light;
 }
 
-h1{
-    @include font(60px, $font-semibold, $color-font-dark)
-}
+h1 {
+    @include font(60px, $font-semibold, $color-font-dark); }
 
-h2{
-    @include font(40px, $font-semibold, $color-font-dark)
-}
+h2 {
+    @include font(40px, $font-semibold, $color-font-dark); }
 
-h3{
-    @include font(36px, $font-semibold, $color-font-dark)
-}
+h3 {
+    @include font(36px, $font-semibold, $color-font-dark); }
 
-h4{
-    @include font(20px, $font-semibold, $color-font-dark)
-}
+h4 {
+    @include font(20px, $font-semibold, $color-font-dark); }
 
-p{
-    @include font(16px, $font-regular, $color-font-light)
-}
+p {
+    @include font(16px, $font-regular, $color-font-light); }
 
-.link{
+.link {
     @include font(16px, $font-regular, $light);
     text-decoration: none;
 }
 
-.container{
-    width: 1170px;
-    padding: 15px;
-    margin: 0 auto;
+.container {
     box-sizing: border-box;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
-.list-style{
+.list-style {
     @include font(16px, $font-regular,$color-font-dark);
     list-style-type: none;
 
-    li{
-        position: relative;
+    li {
         display: flex;
         align-items: center;
+        position: relative;
     }
 }
 
-.title-box{
+.title-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    h3{
+    h3 {
         max-width: 500px;
         text-align: center;
         margin-bottom: 20px;
         line-height: 46px;
     }
 
-    p{
+    p {
         max-width: 600px;
         text-align: center;
         line-height: 26px;
     }
 }
 
-.btn{
+.btn {
     @include font(16px, $font-bold, $light);
+    border: 2px solid transparent;
 
     padding: 10px 35px;
     background-color: $primary-1;
     border-radius: 30px;
     outline: none;
-    border: 2px solid transparent;
     border-color: transparent;
+    cursor: pointer;
 
-    &:hover{
+    &:hover, &:focus {
+        transition: .4s;
         background-color: $light;
         color: $primary-1;
-        transition: .4s;
         border-color: $primary-1;
     }
 }
 
-@media (max-width: $screen-large){
-    .container{
-        width:960px;
+@media (max-width: $screen-large) {
+    .container {
+        width: 960px;
     }
 }
 
-@media (max-width: $screen-medium){
-    .container{
-        width:720px;
+@media (max-width: $screen-medium) {
+    .container {
+        width: 720px;
     }
 }
 
-@media (max-width: $screen-small){
-    .container{
-        width:525px;
+@media (max-width: $screen-small) {
+    .container {
+        width: 525px;
     }
     
-    .btn{
+    .btn {
         padding: 10px 15px;
     }
 }
 
-@media (max-width: $screen-extra-small) { 
-    .container{
-        width:490px;
+@media (max-width: $screen-extra-small) {
+    .container {
+        width: 490px;
     }
- }
+}

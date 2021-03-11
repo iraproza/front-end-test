@@ -1,89 +1,86 @@
-.box-advantages{
+.box-advantages {
     margin-top: 100px;
     padding: 10px 80px;
 }
 
-.cards{
+.cards {
     @include flex(center,center,row,wrap);
 
-    .plus{
-        max-width: 33%;
+    .plus {
         box-sizing: border-box;
-        text-align: center;
-        padding:35px;
+        max-width: 33%;
+        padding: 35px;
         transition: .4s;
+        text-align: center;
 
-        &:hover{
-           transform: scale(1.1);
-           transition: .4s;
+        &:hover {
+            transform: scale(1.1);
+            transition: .4s;
         }
 
-        .box-img{
-            margin: 0 auto; 
+        .box-img {
+            @include flex(); 
             width: 90px;
             height: 90px;
-            @include flex();              
+            margin: 0 auto;
             border-radius: 100%;
 
-            .image-card{
+            .image-card {
                 width: 60%;
             }
         }
     }
 }
 
-.plus{
-
-    &:first-of-type .box-img{
+.plus {
+    &:first-of-type .box-img {
         background-color: $primary-3;
     }
     
-    &:nth-of-type(2) .box-img{
+    &:nth-of-type(2) .box-img {
         background-color: $primary-4;
     }
 
-    &:nth-of-type(3) .box-img{
+    &:nth-of-type(3) .box-img {
         background-color: $primary-5;
     }
 
-    &:nth-of-type(4) .box-img{
+    &:nth-of-type(4) .box-img {
         background-color: $primary-6;
     }
 
-    &:nth-of-type(5) .box-img{
+    &:nth-of-type(5) .box-img {
         background-color: $primary-7;
     }
 
-    &:last-of-type .box-img{
+    &:last-of-type .box-img {
         background-color: $primary-8;
     }
 }
 
-@media (max-width: $screen-medium){
-    .box-advantages{
-
+@media (max-width: $screen-medium) {
+    .box-advantages {
         padding: 10px 20px;
 
-        .title-box{
-
-            .advantages-title{
+        .title-box {
+            .advantages-title {
                 font-size: 30px;
             }
         }
     }
     
-    .cards{
+    .cards {
         @include flex(center,center,row,wrap);
 
-        .plus{
+        .plus {
             max-width: 50%;
-            padding:20px;
+            padding: 20px;
 
-            .box-img{
+            .box-img {
                 @include flex(center,center);            
                 border-radius: 100%;
 
-                .image-card{
+                .image-card {
                     width: 60%;
                 }
             }
@@ -91,15 +88,14 @@
     }
 }
 
-@media (max-width: $screen-small){
-    .cards{
-
-        .plus{
+@media (max-width: $screen-small) {
+    .cards {
+        .plus {
             max-width: 100%;
-            
-            .box-img{
-            width: 120px;
-            height: 120px;
+
+            .box-img {
+                width: 120px;
+                height: 120px;
             }
         }
     }

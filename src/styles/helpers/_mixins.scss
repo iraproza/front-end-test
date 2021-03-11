@@ -5,9 +5,9 @@
 }
 
 @mixin flex ( $justify-content:center, $align-items:center,$flex-direction:row, $flex-wrap:nowrap, $display:flex) {
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
     display: $display;
     flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
 }

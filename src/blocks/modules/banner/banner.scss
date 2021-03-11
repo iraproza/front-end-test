@@ -1,54 +1,54 @@
-.bg-banner{
+.bg-banner {
     background-image: url(../img/city.png);
     background-repeat: repeat-x;
     background-position: bottom;
 
-    .bg-circle{
+    .bg-circle {
         background-image: url(../img/circle.png);
         background-size: contain;
-        background-repeat:repeat-x ;
+        background-repeat: repeat-x;
     }
 }
 
-.banner{
+.banner {
     @include flex(space-between);
 
     padding: 35px 15px 20px 70px;
 
-    .title-banner{
+    .title-banner {
         width: 60%;
 
-        .description-banner{
+        .description-banner {
             padding-right: 80px;
         }
 
-        .title-big{
+        .title-big {
             line-height: 75px;
         }
     }
 
-    .watch-video{
+    .watch-video {
         @include font( 18px, $font-semibold, $primary-1);
 
         margin-left: 25px;
         text-decoration: none;
         transition: .4s;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
 
-    .image-banner-box{
+    .image-banner-box {
         text-align: right;
 
-        .image-banner{
+        .image-banner {
             width: 100%;
         }
     }
 }
 
-.small-title{
+.small-title {
     @include flex (flex-start);
 
     background-color: #e2eaed;
@@ -56,92 +56,91 @@
     max-width: 365px;
     margin-bottom: 20px;
 
-    .circle{
-            @include flex();
+    .circle {
+        @include flex();
             
-            margin-right: 10px;
-            width: 39px;
-            height: 35px;
-            border-radius: 100%;
-            background-color: $primary-2;
+        margin-right: 10px;
+        width: 39px;
+        height: 35px;
+        border-radius: 100%;
+        background-color: $primary-2;
 
-            .icon{ 
-                font-size: 19px; 
-                color: $light;
-            }
+        .icon {
+            font-size: 19px;
+            color: $light;
+        }
     }
 
-    .title{
-        @include font( 18px, $font-regular)
-    }
+    .title {
+        @include font( 18px, $font-regular); }
 }
 
-@media (max-width: $screen-medium){
+@media (max-width: $screen-medium) {
 
-    .banner{
+    .banner {
         padding-left: 15px;
 
-        .image-banner-box{
+        .image-banner-box {
 
-            .image-banner{
+            .image-banner {
                 width: 100%;
             }
         }
 
-        .title-banner{
+        .title-banner {
             width: 100%;
 
-            .title-big{
+            .title-big {
                 font-size: 30px;
                 line-height: 40px;
             }
 
-            .description-banner{
+            .description-banner {
                 padding-right: 20px;
             }
         }
     }
 
-    .small-title{
+    .small-title {
         max-width: 310px;
 
-        .title{
+        .title {
             font-size: 16px;
         }
     }
 }
 
-@media (max-width: $screen-small){
-    .banner{
+@media (max-width: $screen-small) {
+    .banner {
         padding-left: 15px;
 
-        .image-banner{
+        .image-banner {
             display: none;
-            }
+        }
 
-        .title-banner{
+        .title-banner {
             text-align: center;
 
-            .description-banner{
-                padding-right: 0px;
+            .description-banner {
+                padding-right: 0;
             }
 
-            .btn-box{
+            .btn-box {
                 @include flex (space-around);
 
-                .btn{
+                .btn {
                     padding: 10px 20px;
                 }
 
-                .watch-video{
+                .watch-video {
                     margin: 0;
                 }
             }
         }
     }
     
-    .small-title{
-        margin: 0 auto;  
-        margin-bottom: 15px;              
+    .small-title {
+        margin: 0 auto;
+        margin-bottom: 15px;
     }
 }

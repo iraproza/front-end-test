@@ -1,56 +1,57 @@
-.box-faq{
+.box-faq {
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-.accordion-container{
+.accordion-container {
     @include flex(flex-start,stretch,column);
-
-    margin: 30px auto;
     width: 70%;
 
-    .accordion{
+    margin: 30px auto;
+
+    .accordion {
         @include font(20px, $font-medium, $color-font-dark);
         @include flex(flex-start);
+        position: relative;
+        min-height: 58px;
+        border: none;
+        padding: 15px 50px;
+        transition: padding-top .2s;
 
         text-align: left;
-        padding-left: 50px;
         background-color: $primary-1-light;
-        border: none;
-        min-height: 58px;
         margin-top: 10px;
-        position: relative;
         outline: none;
 
-        &::after{
-            content: '+';
+        &::after {
+            content: "+";
             position: absolute;
             top: 10%;
             right: 10px;
+            transition: .2s;
             font-size: 30px;
             color: $color-font-dark;
-            transition: .2s;
         }
 
-        &.open{
+        &.open {
             font-family: $font-semibold;
-
+            padding-top: 45px;
         }
 
-        &.open::after{
+        &.open::after {
             opacity: 0;
         }
     }
 
-    .panel{
-        padding-left: 50px;
-        padding-right: 90px;
+    .panel {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        background-color:  $primary-1-light;
+        padding-left: 50px;
+        padding-right: 90px;
+        background-color: $primary-1-light;
 
-        &.open{
+        &.open {
             display: block;
             padding-bottom: 40px;
         }
@@ -58,24 +59,24 @@
 }
 
 
-@media (max-width: $screen-medium){
+@media (max-width: $screen-medium) {
     .box-faq {
         margin-top: 50px;
     }
 
-    .accordion-container{
+    .accordion-container {
         width: 100%;
 
-        .accordion{
+        .accordion {
             padding-left: 25px;
             padding-right: 25px;
         }
 
-        .panel{
+        .panel {
             padding-left: 25px;
             padding-right: 25px;
             
-            &.open{
+            &.open {
                 padding-bottom: 20px;
             }
         }
