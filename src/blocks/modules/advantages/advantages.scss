@@ -5,7 +5,6 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-
         .plus{
             max-width: 33%;
             box-sizing: border-box;
@@ -32,22 +31,71 @@
     }
 }
 
-.cards  .plus:first-of-type .box-img{
-    background-color: $primary-3;
-}
-.cards  .plus:nth-of-type(2) .box-img{
-    background-color: $primary-4;
-}
-.cards  .plus:nth-of-type(3) .box-img{
-    background-color: $primary-5;
-}
-.cards  .plus:nth-of-type(4) .box-img{
-    background-color: $primary-6;
-}
-.cards  .plus:nth-of-type(5) .box-img{
-    background-color: $primary-7;
+.cards {
+    .plus{
+        &:first-of-type .box-img{
+            background-color: $primary-3;
+        }
+        &:nth-of-type(2) .box-img{
+            background-color: $primary-4;
+        }
+        &:nth-of-type(3) .box-img{
+            background-color: $primary-5;
+        }
+        &:nth-of-type(4) .box-img{
+            background-color: $primary-6;
+        }
+        &:nth-of-type(5) .box-img{
+            background-color: $primary-7;
+        }
+        &:last-of-type .box-img{
+            background-color: $primary-8;
+        }
+    }
 }
 
-.cards  .plus:last-of-type .box-img{
-    background-color: $primary-8;
+
+@media (max-width: 991px){
+    .box-advantages{
+        padding: 10px 20px;
+        .title-box{
+            margin-top: 50px;
+            h3{
+                font-size: 30px;
+            }
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .plus{
+                max-width: 50%;
+                padding:20px;
+                .box-img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;                
+                    border-radius: 100%;
+                    img{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .box-advantages{
+        .cards{
+            .plus{
+                max-width: 100%;
+                .box-img{
+                width: 120px;
+                height: 120px;
+            }
+            }
+        }
+    }
 }
