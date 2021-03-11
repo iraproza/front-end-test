@@ -1,11 +1,11 @@
 .header-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between);
     position: relative;
+    
     .logo {
         @include font(30px, $font-bold, $color-font-dark);
         text-decoration: none;
+        
         .logo-span {
             color: $primary-2-light;
         }
@@ -13,9 +13,8 @@
 }
 
 .menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between);
+    
     .burger-menu{
         display: none;
         padding: 0;
@@ -32,6 +31,7 @@
             height: 3px;
             background-color: $primary-1;
             display: block;
+
             &::after{
                 content: '';
                 position: absolute;
@@ -42,6 +42,7 @@
                 background-color: $primary-1;
                 
             }
+
             &::before{
                 content: '';
                 position: absolute;
@@ -54,29 +55,37 @@
             }
         }
     }
+
     .click{
+
          .line{
             transform: rotate(45deg);
+
             &::before{
                 transform: rotate(-90deg);
                 top: 0px;
             }
+
             &::after{
                display: none;
             }
+
          }   
     }
+
     .btn{
         margin-left: 25px;
     }
 }
 .navigation{
-    display: flex;
+    @include flex(flex-start, stretch);
+
     .menu-item{
         @include font(16px, $font-regular, $color-font-dark);
         padding: 5px 15px;
         text-decoration: none;
         border-radius: 30px;
+
         &:hover{
             background-color: $primary-1;
             transition: .4s;
@@ -87,40 +96,46 @@
 
 @media (max-width: $screen-medium){
     .menu{
+
         .navigation{
             max-height: 0;
             overflow: hidden;
             position: absolute;
-            flex-direction: column;
             top: 70px;
             left: 0px;
             width: 100%;
             border-radius: 10px;
             transition: max-height 0.3s ease-out;
             text-align: center;
+
             .menu-item{
                 background-color: $primary-1;
                 width: 100%;
                 border-radius: 0px;
                 color: $light;
                 line-height: 35px;
+
                 &:hover{
                     background-color: $primary-1-light;
                     color: $primary-1;
                 }
             }
+
             li:first-child>.menu-item{
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
             }
+
             li:last-child>.menu-item{
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
             }
         }
+
         .open-menu{
             display: flex;
         }
+
         .burger-menu{
             display: inline-block;
         }
@@ -129,6 +144,7 @@
 
 @media (max-width: $screen-small){
     .header-box{
+        
         .btn{
             display: none;
         }

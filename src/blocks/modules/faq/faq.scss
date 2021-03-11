@@ -1,18 +1,19 @@
 .box-faq{
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 
 .accordion-container{
-    display: flex;
-    flex-direction: column;
+    @include flex(flex-start,stretch,column);
+
     margin: 30px auto;
     width: 70%;
 
     .accordion{
         @include font(20px, $font-medium, $color-font-dark);
+        @include flex(flex-start);
+
         text-align: left;
-        display: flex;
-        align-items: center;
         padding-left: 50px;
         background-color: $primary-1-light;
         border: none;
@@ -20,6 +21,7 @@
         margin-top: 10px;
         position: relative;
         outline: none;
+
         &::after{
             content: '+';
             position: absolute;
@@ -29,14 +31,17 @@
             color: $color-font-dark;
             transition: .2s;
         }
+
         &.open{
             font-family: $font-semibold;
 
         }
+
         &.open::after{
             opacity: 0;
         }
     }
+
     .panel{
         padding-left: 50px;
         padding-right: 90px;
@@ -44,6 +49,7 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         background-color:  $primary-1-light;
+
         &.open{
             display: block;
             padding-bottom: 40px;
@@ -53,20 +59,22 @@
 
 
 @media (max-width: $screen-medium){
-    .box-faq{
-        .title-box{
-            margin-top: 50px;
-        }
+    .box-faq {
+        margin-top: 50px;
     }
+
     .accordion-container{
         width: 100%;
+
         .accordion{
             padding-left: 25px;
             padding-right: 25px;
         }
+
         .panel{
             padding-left: 25px;
             padding-right: 25px;
+            
             &.open{
                 padding-bottom: 20px;
             }

@@ -1,28 +1,88 @@
 .box-advantages{
+    margin-top: 100px;
     padding: 10px 80px;
-    .cards{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        .plus{
-            max-width: 33%;
-            box-sizing: border-box;
-            text-align: center;
-            padding:35px;
-            transition: .4s;
-            &:hover{
-               transform: scale(1.1);
-               transition: .4s;
+}
+
+.cards{
+    @include flex(center,center,row,wrap);
+
+    .plus{
+        max-width: 33%;
+        box-sizing: border-box;
+        text-align: center;
+        padding:35px;
+        transition: .4s;
+
+        &:hover{
+           transform: scale(1.1);
+           transition: .4s;
+        }
+
+        .box-img{
+            margin: 0 auto; 
+            width: 90px;
+            height: 90px;
+            @include flex();              
+            border-radius: 100%;
+
+            .image-card{
+                width: 60%;
             }
+        }
+    }
+}
+
+.plus{
+
+    &:first-of-type .box-img{
+        background-color: $primary-3;
+    }
+    
+    &:nth-of-type(2) .box-img{
+        background-color: $primary-4;
+    }
+
+    &:nth-of-type(3) .box-img{
+        background-color: $primary-5;
+    }
+
+    &:nth-of-type(4) .box-img{
+        background-color: $primary-6;
+    }
+
+    &:nth-of-type(5) .box-img{
+        background-color: $primary-7;
+    }
+
+    &:last-of-type .box-img{
+        background-color: $primary-8;
+    }
+}
+
+@media (max-width: $screen-medium){
+    .box-advantages{
+
+        padding: 10px 20px;
+
+        .title-box{
+
+            .advantages-title{
+                font-size: 30px;
+            }
+        }
+    }
+    
+    .cards{
+        @include flex(center,center,row,wrap);
+
+        .plus{
+            max-width: 50%;
+            padding:20px;
+
             .box-img{
-                margin: 0 auto; 
-                width: 90px;
-                height: 90px;
-                display: flex;
-                justify-content: center;
-                align-items: center;                
+                @include flex(center,center);            
                 border-radius: 100%;
+
                 .image-card{
                     width: 60%;
                 }
@@ -31,69 +91,15 @@
     }
 }
 
-.cards {
-    .plus{
-        &:first-of-type .box-img{
-            background-color: $primary-3;
-        }
-        &:nth-of-type(2) .box-img{
-            background-color: $primary-4;
-        }
-        &:nth-of-type(3) .box-img{
-            background-color: $primary-5;
-        }
-        &:nth-of-type(4) .box-img{
-            background-color: $primary-6;
-        }
-        &:nth-of-type(5) .box-img{
-            background-color: $primary-7;
-        }
-        &:last-of-type .box-img{
-            background-color: $primary-8;
-        }
-    }
-}
-
-@media (max-width: $screen-medium){
-    .box-advantages{
-        padding: 10px 20px;
-        .title-box{
-            margin-top: 50px;
-            .advantages-title{
-                font-size: 30px;
-            }
-        }
-        .cards{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            .plus{
-                max-width: 50%;
-                padding:20px;
-                .box-img{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;                
-                    border-radius: 100%;
-                    .image-card{
-                        width: 60%;
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media (max-width: $screen-small){
-    .box-advantages{
-        .cards{
-            .plus{
-                max-width: 100%;
-                .box-img{
-                width: 120px;
-                height: 120px;
-                }
+    .cards{
+
+        .plus{
+            max-width: 100%;
+            
+            .box-img{
+            width: 120px;
+            height: 120px;
             }
         }
     }

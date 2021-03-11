@@ -2,6 +2,7 @@
     background-image: url(../img/city.png);
     background-repeat: repeat-x;
     background-position: bottom;
+
     .bg-circle{
         background-image: url(../img/circle.png);
         background-size: contain;
@@ -10,84 +11,102 @@
 }
 
 .banner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between);
+
     padding: 35px 15px 20px 70px;
+
     .title-banner{
         width: 60%;
+
         .description-banner{
             padding-right: 80px;
         }
-        .small-title{
-            display: flex;
-            align-items: center;
-            background-color: #e2eaed;
-            border-radius: 20px;
-            max-width: 365px;
-            margin-bottom: 20px;
-            .circle{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-right: 10px;
-                    width: 39px;
-                    height: 35px;
-                    border-radius: 100%;
-                    background-color: $primary-2;
-                    .icon{ 
-                        font-size: 19px; 
-                        color: $light;
-                    }
-            }
-            .title{
-                @include font( 18px, $font-regular)
-            }
-        }
+
         .title-big{
             line-height: 75px;
         }
     }
+
     .watch-video{
         @include font( 18px, $font-semibold, $primary-1);
+
         margin-left: 25px;
         text-decoration: none;
         transition: .4s;
+
         &:hover{
             text-decoration: underline;
         }
     }
+
     .image-banner-box{
         text-align: right;
+
         .image-banner{
             width: 100%;
         }
     }
 }
 
+.small-title{
+    @include flex (flex-start);
+
+    background-color: #e2eaed;
+    border-radius: 20px;
+    max-width: 365px;
+    margin-bottom: 20px;
+
+    .circle{
+            @include flex();
+            
+            margin-right: 10px;
+            width: 39px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: $primary-2;
+
+            .icon{ 
+                font-size: 19px; 
+                color: $light;
+            }
+    }
+
+    .title{
+        @include font( 18px, $font-regular)
+    }
+}
+
 @media (max-width: $screen-medium){
+
     .banner{
         padding-left: 15px;
+
         .image-banner-box{
+
             .image-banner{
                 width: 100%;
             }
         }
+
         .title-banner{
             width: 100%;
+
             .title-big{
                 font-size: 30px;
                 line-height: 40px;
             }
+
             .description-banner{
                 padding-right: 20px;
             }
-            .small-title{
-                max-width: 310px;
-                .title{
-                    font-size: 16px;
-                }
-            }
+        }
+    }
+
+    .small-title{
+        max-width: 310px;
+
+        .title{
+            font-size: 16px;
         }
     }
 }
@@ -95,29 +114,34 @@
 @media (max-width: $screen-small){
     .banner{
         padding-left: 15px;
+
         .image-banner{
             display: none;
             }
+
         .title-banner{
             text-align: center;
+
             .description-banner{
                 padding-right: 0px;
             }
-            .small-title{
-                margin: 0 auto;  
-                margin-bottom: 15px;              
-            }
+
             .btn-box{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
+                @include flex (space-around);
+
                 .btn{
                     padding: 10px 20px;
                 }
+
                 .watch-video{
                     margin: 0;
                 }
             }
         }
+    }
+    
+    .small-title{
+        margin: 0 auto;  
+        margin-bottom: 15px;              
     }
 }
