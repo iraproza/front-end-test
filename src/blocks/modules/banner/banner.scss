@@ -16,8 +16,8 @@
     padding: 35px 15px 20px 70px;
     .title-banner{
         width: 60%;
-        p{
-            max-width: 420px;
+        .description-banner{
+            padding-right: 80px;
         }
         .small-title{
             display: flex;
@@ -35,16 +35,16 @@
                     height: 35px;
                     border-radius: 100%;
                     background-color: $primary-2;
-                    i{ 
+                    .icon{ 
                         font-size: 19px; 
                         color: $light;
                     }
             }
-            h4{
+            .title{
                 @include font( 18px, $font-regular)
             }
         }
-        h1{
+        .title-big{
             line-height: 75px;
         }
     }
@@ -53,36 +53,38 @@
         margin-left: 25px;
         text-decoration: none;
         transition: .4s;
-
         &:hover{
             text-decoration: underline;
         }
     }
-    .image-banner{
+    .image-banner-box{
         text-align: right;
-    }
-    img{
-        width: 100%;
+        .image-banner{
+            width: 100%;
+        }
     }
 }
 
 @media (max-width: 991px){
     .banner{
         padding-left: 15px;
-        .image-banner{
-            img{
+        .image-banner-box{
+            .image-banner{
                 width: 100%;
             }
         }
         .title-banner{
             width: 100%;
-            h1{
+            .title-big{
                 font-size: 30px;
                 line-height: 40px;
             }
+            .description-banner{
+                padding-right: 20px;
+            }
             .small-title{
                 max-width: 310px;
-                h4{
+                .title{
                     font-size: 16px;
                 }
             }
@@ -98,6 +100,9 @@
             }
         .title-banner{
             text-align: center;
+            .description-banner{
+                padding-right: 0px;
+            }
             .small-title{
                 margin: 0 auto;  
                 margin-bottom: 15px;              

@@ -23,7 +23,7 @@
                 justify-content: center;
                 align-items: center;                
                 border-radius: 100%;
-                img{
+                .image-card{
                     width: 60%;
                 }
             }
@@ -54,13 +54,12 @@
     }
 }
 
-
 @media (max-width: 991px){
     .box-advantages{
         padding: 10px 20px;
         .title-box{
             margin-top: 50px;
-            h3{
+            .advantages-title{
                 font-size: 30px;
             }
         }
@@ -77,7 +76,7 @@
                     justify-content: center;
                     align-items: center;                
                     border-radius: 100%;
-                    img{
+                    .image-card{
                         width: 60%;
                     }
                 }
@@ -94,7 +93,7 @@
                 .box-img{
                 width: 120px;
                 height: 120px;
-            }
+                }
             }
         }
     }
