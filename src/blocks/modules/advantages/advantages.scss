@@ -54,7 +54,7 @@
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: $screen-medium){
     .box-advantages{
         padding: 10px 20px;
         .title-box{
@@ -85,7 +85,7 @@
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: $screen-small){
     .box-advantages{
         .cards{
             .plus{

@@ -85,7 +85,7 @@
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: $screen-medium){
     .menu{
         .navigation{
             max-height: 0;
@@ -127,7 +127,7 @@
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: $screen-small){
     .header-box{
         .btn{
             display: none;

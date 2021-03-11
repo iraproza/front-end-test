@@ -65,7 +65,7 @@
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: $screen-medium){
     .banner{
         padding-left: 15px;
         .image-banner-box{
@@ -92,7 +92,7 @@
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: $screen-small){
     .banner{
         padding-left: 15px;
         .image-banner{

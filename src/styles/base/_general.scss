@@ -85,19 +85,19 @@ p{
     }
 }
 
-@media (max-width: 1200px){
+@media (max-width: $screen-large){
     .container{
         width:960px;
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: $screen-medium){
     .container{
         width:720px;
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: $screen-small){
     .container{
         width:525px;
     }
@@ -106,7 +106,7 @@ p{
     }
 }
 
-@media (max-width: 575px) { 
+@media (max-width: $screen-extra-small) { 
     .container{
         width:490px;
     }
