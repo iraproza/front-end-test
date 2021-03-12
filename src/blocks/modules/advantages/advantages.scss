@@ -4,9 +4,14 @@
 }
 
 .cards {
-    @include flex(center,center,row,wrap);
+    @include flex(center,stretch,row,wrap);
+
+    .content{
+        @include flex(center,center,column);
+    }
 
     .plus {
+        @include flex(space-between,stretch,column);
         box-sizing: border-box;
         max-width: 33%;
         padding: 35px;
@@ -70,7 +75,7 @@
     }
     
     .cards {
-        @include flex(center,center,row,wrap);
+        @include flex(center,stretch,row,wrap);
 
         .plus {
             max-width: 50%;

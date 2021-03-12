@@ -9,51 +9,56 @@
 
     margin: 30px auto;
 
-    .accordion {
-        @include font(20px, $font-medium, $color-font-dark);
-        @include flex(flex-start);
-        position: relative;
-        min-height: 58px;
-        border: none;
-        padding: 15px 50px;
-        transition: padding-top .2s;
-
-        text-align: left;
-        background-color: $primary-1-light;
-        margin-top: 10px;
-        outline: none;
-
-        &::after {
-            content: "+";
-            position: absolute;
-            top: 10%;
-            right: 10px;
-            transition: .2s;
-            font-size: 30px;
-            color: $color-font-dark;
-        }
+    .accordion-item{
+        @include flex(flex-start,stretch,column);
 
         &.open {
-            font-family: $font-semibold;
-            padding-top: 45px;
+            .accordion{
+                padding-top: 45px;
+                font-family: $font-semibold;
+
+                &::after{
+                    opacity: 0;
+                }
+            }
+            .panel{
+                display: block;
+                padding-bottom: 40px;
+            }
         }
 
-        &.open::after {
-            opacity: 0;
+
+        .accordion {
+            @include font(20px, $font-medium, $color-font-dark);
+            @include flex(flex-start);
+            position: relative;
+            min-height: 58px;
+            border: none;
+            padding: 15px 50px;
+            transition: padding-top .2s;
+            text-align: left;
+            background-color: $primary-1-light;
+            margin-top: 10px;
+            outline: none;
+
+            &::after {
+                content: "+";
+                position: absolute;
+                top: 10%;
+                right: 10px;
+                transition: .2s;
+                font-size: 30px;
+                color: $color-font-dark;
+            }
         }
-    }
 
-    .panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        padding-left: 50px;
-        padding-right: 90px;
-        background-color: $primary-1-light;
-
-        &.open {
-            display: block;
-            padding-bottom: 40px;
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            padding-left: 50px;
+            padding-right: 90px;
+            background-color: $primary-1-light;
         }
     }
 }

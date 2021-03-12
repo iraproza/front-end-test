@@ -10,3 +10,14 @@ navBtn.addEventListener("click", function(){
         menu.style.maxHeight = menu.scrollHeight + "px";
       }
 })
+
+let header = document.querySelector('.header-block');
+
+document.addEventListener('scroll', function() {
+  if (window.scrollY >= header.offsetHeight) {
+    header.classList.add('bg-header')
+  } 
+  else {
+    header.classList.remove('bg-header')
+  };
+});
